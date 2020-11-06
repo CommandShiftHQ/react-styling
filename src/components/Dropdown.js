@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import styles from './DropdownStyles.js';
 
 const Dropdown = ({title, options}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,17 +12,29 @@ const Dropdown = ({title, options}) => {
       ? `${title} - ${selectedOption.label}`
       : title;
 
+  const {
+    root, button, ul, li
+  } = styles; 
+
   return (
-    <div className="dropdown">
-      <button className="dropdown__header" onClick={() => setIsOpen(!isOpen)}>
+    <div className="dropdown" style={root} >
+      <button
+        className="dropdown__header"
+        style={button}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {getDropdownTitle}
       </button>
       {
         isOpen && (
           <div className="dropdown__body">
-            <ul>
+            <ul style={ul} >
               {options.map((option) => (
-              <li key={option.id} onClick={() => setSelectedValue(option.id)}>
+              <li 
+                key={option.id}
+                style={li}
+                onClick={() => setSelectedValue(option.id)}
+              >
                 {option.label}
               </li>
             ))}
