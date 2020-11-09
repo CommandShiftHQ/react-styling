@@ -21,6 +21,27 @@ This demo is continuation of our [React Intro](https://github.com/MCRcodes/react
 
 ### CSS-in-JS: styled-components
 
+1. Install `styled-components` library by running command below and start React app:
+
+   `npm install --save styled-components`
+
+2. Import library in `<Dropdown />` component:
+
+   `import styled from 'styled-components';`
+
+3. Add constants with colours (as objects), and with styled components using `styled` object, for instance:
+
+   `` const DropdownRoot = styled.div`width: 300px;`; ``
+
+Remember:
+
+- constants storing reusable values should be camel cased.
+- styled components should be camel cased, but start with capital letter, as any other component.
+- property od styled component object should be desired tag name,
+- styling rules should be listed between backticks (keeping CSS syntax), as a template literate, which means you can use JavaScript variables.
+
+4. Replace appropriate tags with new styled components.
+
 ## Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
