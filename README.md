@@ -6,7 +6,20 @@ This demo is continuation of our [React Intro](https://github.com/MCRcodes/react
 
 ...
 
-## Steps
+## Styling Techniques
+
+### Inline Styles
+
+1. Create `DropdownStyles.js` file in `components` directory.
+2. Using `export default {}` create an object add properties of `root`, `button`, `ul`, and `li` inside. Each can be an empty object for now.
+3. Style `<Dropdown />` using camel cased CSS properties with values in single quotes, for instance `fontSize: '16px'`.
+4. Import styles in `<Dropdown />` component:
+
+   `import styles from './DropdownStyles.js';`
+
+5. Add `style` prop to each element you want to style. Value of each `style` prop should be an object imported from `DropdownStyles.js`, for instance `<div style={styles.root} >`. You can also deconstruct each styling object and use deconstructed constant names in JSX.
+
+### CSS-in-JS: styled-components
 
 ## Info
 
