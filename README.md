@@ -4,7 +4,10 @@ This demo is continuation of our [React Intro](https://github.com/MCRcodes/react
 
 ## Objectives
 
-...
+After this demo presentation students should be familiar with basic, practical usage of:
+
+- inline styles in React Components,
+- `styled-components` library in React Components.
 
 ## Styling Techniques
 
